@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Kdam+Thmor+Pro&family=Playpen+Sans:wght@700&family=Roboto+Mono&family=Roboto:ital,wght@0,100;0,300;0,700;1,100;1,300;1,500&family=Rubik+Doodle+Shadow&family=Rubik+Doodle+Triangles&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Kdam+Thmor+Pro&family=Playpen+Sans:wght@700&family=Roboto+Mono&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Doodle+Shadow&family=Rubik+Doodle+Triangles&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -33,21 +33,30 @@ ol, ul {
 	list-style: none;
 }
 
+:root{
+    --sidebar: #2575bc;
+    --project-border: #BC6C25;
+    --main-background: #deedf9;
+    --text-color: rgb(255, 255, 255);
+}
+
 body{
     display: grid;
     grid-template-rows: 1fr 9fr;
-    grid-template-columns: 1.4fr 4fr;
+    grid-template-columns: 1.2fr 4fr;
     height: 100vh;
+    background-color: var(--main-background);
 }
 
 .header{
-    background-color: aqua;
+    background-color: white;
     grid-column: 2;
     grid-row: 1 / 2;
     display: grid;
     grid-template-rows: 1fr 2.5fr;
-    padding: 1rem 2rem;
-    line-height: 2rem;
+    padding: .75rem 2rem;
+    line-height: 1.5rem;
+    box-shadow: 0px 1px 5px grey;
 }
 .header>div:nth-child(1){
     display: flex;
@@ -59,11 +68,24 @@ body{
     justify-content: end;
     margin-left: 4rem;
 }
+.profile-username{
+    font-weight: 600;
+}
+.greeting{
+    font-weight: 600;
+    font-size: .75rem;
+}
+.username{
+    font-weight: 600;
+    font-size: 1.25rem;
+}
 
 input{
     flex: 2;
-    border-radius: 5px;
-    border: 1px solid black;
+    border-radius: 20px;
+    padding: .5rem;
+    border: none;
+    background-color: var(--main-background);
 }
 
 .header>div:nth-child(2){
@@ -79,9 +101,21 @@ input{
     gap: 4rem;
 }
 
+.create div{
+    box-sizing: border-box;
+    background-color: var(--sidebar);
+    width: 5rem;
+    border-radius: 20px;
+    padding: 3px 10px;
+    text-align: center;
+    font-weight: 700;
+    font-size: .8rem;
+    color: var(--text-color);
+    
+}
 
 .sidebar{
-    background-color: brown;
+    background-color: var(--sidebar);
     grid-row: 1 / 3;
     padding: 1rem;
 }
@@ -91,11 +125,115 @@ input{
     margin-bottom: 3rem;
     gap: 1.2rem;
 }
+
+.sidebar li, .sidebar p{
+    color: var(--text-color);
+    font-weight:500;
+
+}
 .sidebar p{
     font-size: 1.5rem;
     margin-bottom: 3rem;
 }
 
+
+
 .content{
-    background-color:burlywood ;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 4fr 1.3fr;
+    padding: 1rem;
+    padding-bottom: 3rem;
+    gap: 1rem;
 }
+
+.content-label{
+    font-weight: 500;
+    font-size: 1.1rem;
+    grid-row: 1;
+    grid-column: 1 / -1;
+}
+
+
+.projects{
+    grid-row: 1 / 3;
+    display: grid;
+    grid-template-rows: 1rem;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+
+}
+
+.projects div{
+    background-color: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 1px 1px 8px grey;
+    border-left: 10px solid var(--project-border);
+    font-size: .75rem;
+    color: grey;
+    line-height: 1rem;
+}
+
+.projects div > p{
+    color: black;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: .5rem;
+}
+.trending{
+    margin-top: 1rem;
+}
+.annoucements, .trending{
+    display: grid;
+    grid-template-rows: 1rem;
+    gap:1rem;
+}
+
+.annoucements>div , .trending>div{
+    background-color: white;
+    display: grid;
+    gap: 1rem;
+    border-radius: 10px;
+    padding: .75rem;
+    line-height: .6rem;
+    box-shadow: .5px.5px 6px grey;
+}
+.trending>div{
+    gap:0rem;
+    padding: 0rem .75rem;
+}
+
+.annoucements>div>div:first-child, .annoucements>div>div:last-child {
+    border:none;
+    padding: 0;
+}
+
+.annoucements>div>div, .trending>div>div{
+    color:rgb(130, 130, 130);
+    font-size: .5rem;
+    padding: .5rem 0rem;
+    
+}
+.trending>div>div{
+    font-size: .75rem;
+}
+
+.annoucements>div>div{
+    border-top: .5px solid grey;
+    border-bottom: .5px solid grey;
+    font-weight: 500;
+    
+}
+
+
+.annoucements>div>div>p:first-child, .trending>div>div>p:first-child{
+    color:black;
+    font-size: .75rem;
+    padding: .75rem 0rem;
+    
+}
+
+
+
+
