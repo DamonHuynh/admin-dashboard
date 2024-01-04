@@ -193,6 +193,7 @@ input{
     font-size: .75rem;
     color: grey;
     line-height: 1rem;
+    transition: 100ms ease-out;
 }
 .icon-container{
     display: flex;
@@ -256,13 +257,13 @@ input{
     
 }
 
-
 .annoucements>div>div>p:first-child, .trending>div>div>div>p:first-child{
     color:black;
     font-size: .75rem;
     padding: .75rem 0rem;
     
 }
+/* Icons */
 
 .sidebar svg{
     fill: white;
@@ -287,7 +288,7 @@ li svg{
 .icon-container svg{
     width: 1.75rem;
 }
-
+/* Profile pictures */
 .mainpfp, .smallpfp1, .pfp2, .pfp3, .pfp4{
     background-size: cover;
     border-radius: 100px;
@@ -318,4 +319,22 @@ li svg{
 
 .pfp4{
     background-image: url(img/pfp4.jpg);
+}
+
+/* Hover, click, focus effects */
+.clickable, .projects>div{
+    cursor: pointer;
+}
+.clickable:active{
+    position: relative;
+    top: 1px;
+}
+
+.sidebar li:hover, .sidebar p:hover{
+    text-decoration: underline;
+}
+
+.projects>div:hover{
+    transform: scale(1.05);
+   
 }
