@@ -105,6 +105,11 @@ input{
     
 }
 
+.header>div:nth-child(2)>div{
+    display: flex;
+    align-items: center;
+}
+
 .create{
     display: flex;
     gap: 4rem;
@@ -222,9 +227,11 @@ input{
     line-height: .6rem;
     box-shadow: .5px.5px 6px grey;
 }
-.trending>div{
+.trending>div>div{
     gap:0rem;
     padding: 0rem .75rem;
+    display: flex;
+    align-items: center;
 }
 
 .annoucements>div>div:first-child, .annoucements>div>div:last-child {
@@ -238,7 +245,7 @@ input{
     padding: .5rem 0rem;
     
 }
-.trending>div>div{
+.trending>div>div>div{
     font-size: .75rem;
 }
 
@@ -250,7 +257,7 @@ input{
 }
 
 
-.annoucements>div>div>p:first-child, .trending>div>div>p:first-child{
+.annoucements>div>div>p:first-child, .trending>div>div>div>p:first-child{
     color:black;
     font-size: .75rem;
     padding: .75rem 0rem;
@@ -271,9 +278,7 @@ li svg{
     margin-left: 1rem;
     width: 1.75rem;
 }
-.header svg{
 
-}
 .magnify, .profile svg{
     margin-right: 1rem;
     width: 1.75rem;
@@ -283,3 +288,34 @@ li svg{
     width: 1.75rem;
 }
 
+.mainpfp, .smallpfp1, .pfp2, .pfp3, .pfp4{
+    background-size: cover;
+    border-radius: 100px;
+    margin-right: .75rem;
+}
+
+.mainpfp,.smallpfp1{
+    background-image: url(img/pfp1.jpg);
+}
+
+.mainpfp{
+    min-width: 60px;
+    min-height: 60px;
+}
+
+.smallpfp1, .pfp2, .pfp3, .pfp4{
+    min-width: 40px;
+    min-height: 40px;
+}
+
+.pfp2{
+    background-image: url(img/pfp2.jpg);
+}
+
+.pfp3{
+    background-image: url(img/pfp3.jpg);
+}
+
+.pfp4{
+    background-image: url(img/pfp4.jpg);
+}
