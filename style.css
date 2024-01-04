@@ -57,15 +57,17 @@ body{
     padding: .75rem 2rem;
     line-height: 1.5rem;
     box-shadow: 0px 1px 5px grey;
+    row-gap: 1rem;
 }
 .header>div:nth-child(1){
     display: flex;
     justify-content: space-between;
 }
-.header>div:nth-child(1) div{
+.profile{
     flex: 1;
     display: flex;
     justify-content: end;
+    align-items: center;
     margin-left: 4rem;
 }
 .profile-username{
@@ -86,6 +88,13 @@ input{
     padding: .5rem;
     border: none;
     background-color: var(--main-background);
+}
+.search{
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 0px;
 }
 
 .header>div:nth-child(2){
@@ -117,7 +126,8 @@ input{
 .sidebar{
     background-color: var(--sidebar);
     grid-row: 1 / 3;
-    padding: 1rem;
+    padding: 1rem; 
+    
 }
 .sidebar ul{
     display: grid;
@@ -129,6 +139,8 @@ input{
 .sidebar li, .sidebar p{
     color: var(--text-color);
     font-weight:500;
+    display: flex;
+    align-items: center;
 
 }
 .sidebar p{
@@ -164,7 +176,10 @@ input{
 
 }
 
-.projects div{
+.projects>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: white;
     border-radius: 10px;
     padding: 1.5rem;
@@ -174,6 +189,13 @@ input{
     color: grey;
     line-height: 1rem;
 }
+.icon-container{
+    display: flex;
+    justify-content: end;
+    gap: 1rem;
+    border: none;
+}
+
 
 .projects div > p{
     color: black;
@@ -181,6 +203,7 @@ input{
     font-weight: 500;
     margin-bottom: .5rem;
 }
+
 .trending{
     margin-top: 1rem;
 }
@@ -234,6 +257,29 @@ input{
     
 }
 
+.sidebar svg{
+    fill: white;
+    padding-right: 1rem;
 
+}
 
+.dash{
+    width: 4rem;
+}
+
+li svg{
+    margin-left: 1rem;
+    width: 1.75rem;
+}
+.header svg{
+
+}
+.magnify, .profile svg{
+    margin-right: 1rem;
+    width: 1.75rem;
+}
+
+.icon-container svg{
+    width: 1.75rem;
+}
 
